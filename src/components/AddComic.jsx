@@ -8,7 +8,7 @@ const AddComic = ({ handleReload }) => {
 
 const _handleSubmit = async (e) => {
     e.preventDefault();
-const submitResponse = await fetch("https://marvel-comi-api.herokuapp.com", {
+const submitResponse = await fetch("https://marvel-comi-api.herokuapp.com/comics", {
     headers: { 'Content-Type': 'application/json'},
     method: 'POST',
     body: JSON.stringify({ comic_name: comicName, comic_published: comicPublished}),

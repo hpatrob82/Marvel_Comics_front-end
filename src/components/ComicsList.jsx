@@ -7,7 +7,7 @@ const ComicsList = ({reload}) => {
     const history = useHistory();
     useEffect(() => {
         (async () => {
-            const comicsData = await fetch('https://marvel-comi-api.herokuapp.com').then(response => response.json());
+            const comicsData = await fetch('http://127.0.0.1:3333/comics').then(response => response.json());
             console.log('comicsData', comicsData);
             setComics(comicsData);
         
